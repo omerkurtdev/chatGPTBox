@@ -118,9 +118,17 @@ export const config = {
   },
   ask: {
     icon: <QuestionCircle />,
-    label: 'Ask',
+    label: 'Ask (Toxic)',
     genPrompt: createGenPrompt({
-      message: 'Analyze the following content and express your opinion, or give your answer',
+      message: 'Bu metnin toksiklik derecesini 1-10 arasında değerlendir.',
+      includeLanguagePrefix: true,
+    }),
+  },
+  askTypo: {
+    icon: <QuestionCircle />,
+    label: 'Ask (Typo)',
+    genPrompt: createGenPrompt({
+      message: 'Bu metni Türkçe yazım ve imla kurallarına göre düzenle.',
       includeLanguagePrefix: true,
     }),
   },
